@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/basicContainerRelativeLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/background_gradient"
+    tools:context=".activity.WorkOrderActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/linLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+
+
+        <Button
+            android:id="@+id/takePictureBtn"
+            style="@style/transparentButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:drawablePadding="5dp"
+            android:enabled="false"
+            android:layout_marginEnd="15dp"
+            android:drawableStart="@android:drawable/ic_menu_camera"
+            android:drawableTint="@drawable/text_color"
+            android:text="@string/take_picture"
+            android:textAllCaps="false"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"/>
+
+
+        <Button
+            android:id="@+id/scanBarcodeBtn"
+            style="@style/transparentButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:drawablePadding="5dp"
+            android:enabled="false"
+            android:layout_marginEnd="15dp"
+            android:drawableStart="@drawable/ic_barcode"
+            android:drawableTint="@drawable/text_color"
+            android:text="@string/scan_barcode"
+            android:textAllCaps="false"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"/>
+
+        <Button
+            android:id="@+id/checkInBtn"
+            style="@style/transparentButtonStyle"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/checked_out_icon"
+            android:drawablePadding="5dp"
+            android:text="@string/check_in"
+            />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+
+        android:layout_below="@+id/linLayoutTop">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+    <LinearLayout
+        android:id="@+id/linlay11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:gravity="start"
+        android:orientation="vertical">
+
+            <TextView
+                style="@style/containerSubtitleLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/work_order"
+                android:enabled="false"
+                android:layout_marginBottom="10dp"
+               />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/work_order_wo_type"
+            style="@style/materialText"
+            android:theme="@style/materialText">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/workOrderType"
+                style="@style/editTextWorkOrder"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/work_order_wo_code"
+                style="@style/materialText"
+                android:theme="@style/materialText">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/workOrderCode"
+                    style="@style/editTextWorkOrder"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/work_order_wo_date"
+                style="@style/materialText"
+                android:theme="@style/materialText">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/workOrderDate"
+                    style="@style/editTextWorkOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/checkFailureForWO"
+                    style="@style/transparentButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:enabled="true"
+                    android:text="@string/failure"
+                    android:layout_marginEnd="50dp"
+                    android:textAllCaps="false"
+                    />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/warrantyCb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:textColor="@drawable/text_color"
+                    android:buttonTint="@drawable/text_color"
+                    android:text="@string/inWarranty"
+                    />
+
+
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/isLegalPersonCb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:visibility="gone"
+                    android:textColor="@drawable/text_color"
+                    android:buttonTint="@drawable/text_color"
+                    android:text="@string/legalPerson"
+                    />
+            </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/workOrderClientSubtitle"
+                style="@style/containerSubtitleLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/customer"
+                android:enabled="false"
+                android:layout_marginBottom="10dp"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/work_order_customer_name"
+                style="@style/materialText"
+                android:theme="@style/materialText">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/workOrderCustomerName"
+                    style="@style/editTextWorkOrderFocusable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/work_order_customer_address"
+                    style="@style/materialText"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/customerAdressNoLay"
+                    android:layout_marginEnd="10dp"
+                    android:theme="@style/materialText">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/workOrderCustomerAddress"
+                        style="@style/editTextWorkOrderFocusable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/customerAdressNoLay"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/work_order_customer_no"
+                    style="@style/materialText"
+                    android:layout_alignParentEnd="true"
+                    android:theme="@style/materialText">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/workOrderCustomerAddressNo"
+                        style="@style/editTextWorkOrderFocusable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/work_order_customer_city"
+                style="@style/materialText"
+                android:theme="@style/materialText">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/workOrderCustomerCity"
+                    style="@style/editTextWorkOrderFocusable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Beograd"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/work_order_customer_phone"
+                style="@style/materialText"
+                android:theme="@style/materialText">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/workOrderCustomerPhone"
+                    style="@style/editTextWorkOrderFocusable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linlay22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linlay11"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:gravity="start"
+            android:orientation="vertical">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+                <TextView
+                    style="@style/containerSubtitleLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product"
+                    android:enabled="false"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/workOrderChangeProductBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/change_product"
+                    android:enabled="false"
+                    android:textColor="@drawable/text_color"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="sans-serif"
+                    android:drawableStart="@drawable/ic_refresh"
+                    android:drawableTint="@drawable/text_color"
+                    android:layout_marginStart="15dp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/workOrderProdDocBtn"
+                    style="@style/transparentButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                   android:padding="45dp"
+                    android:layout_marginEnd="60dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/ic_attach"
+                    android:drawableTint="@drawable/text_color"
+
+                    />
+
+                <Button
+                    android:id="@+id/workOrderProdHistBtn"
+                    style="@style/transparentButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:padding="45dp"
+                    android:drawableStart="@drawable/ic_history"
+                    android:drawableTint="@drawable/text_color"
+
+
+                    />
+
+            </LinearLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/work_order_partner_name"
+                style="@style/materialText"
+
+                android:theme="@style/materialText">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/workOrderProductName"
+                    style="@style/editTextWorkOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Pec na pelet"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/work_order_partner_code"
+                style="@style/materialText"
+                android:theme="@style/materialText">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/workOrderProductCode"
+                    style="@style/editTextWorkOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PE-8894"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/color_lbl"
+                    style="@style/materialText"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/productMatTypeLay"
+                    android:layout_marginEnd="10dp"
+                    android:theme="@style/materialText">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/workOrderProductColor"
+                        style="@style/editTextWorkOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/productMatTypeLay"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/type_lbl"
+                    style="@style/materialText"
+                    android:layout_alignParentEnd="true"
+                    android:theme="@style/materialText">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/workOrderProductMatType"
+                        style="@style/editTextWorkOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/work_order_product_srnum"
+                style="@style/materialText"
+
+                android:theme="@style/materialText">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/workOrderProductSerNum"
+                    style="@style/editTextWorkOrderFocusable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="17"
+                    android:text=""
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        <!--
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/work_order_product_power"
+                style="@style/materialText"
+                android:theme="@style/materialText">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/workOrderProductPower"
+                    style="@style/editTextWorkOrderFocusable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:text=" "
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            -->
+
+            <!--<com.google.android.material.textfield.TextInputLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:hint="@string/work_order_product_production_date"-->
+                <!--style="@style/materialText"-->
+                <!--android:theme="@style/materialText">-->
+                <!--<com.google.android.material.textfield.TextInputEditText-->
+                    <!--android:id="@+id/workOrderProductProductionDate"-->
+                    <!--style="@style/editTextWorkOrderFocusable"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:focusable="false"-->
+                    <!--android:drawableEnd="@drawable/ic_calendar"-->
+                    <!--android:drawableTint="@drawable/text_color"-->
+                    <!--android:inputType="date"-->
+                    <!--android:text=" "-->
+                    <!--/>-->
+            <!--</com.google.android.material.textfield.TextInputLayout>-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/work_order_product_purchase_date"
+                style="@style/materialText"
+                android:theme="@style/materialText">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/workOrderProductPurchaseDate"
+                    style="@style/editTextWorkOrderFocusable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:drawableTint="@drawable/text_color"
+                    android:inputType="date"
+                    android:focusable="false"
+                    android:text=" "
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/partnerContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/containerSubtitleLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/partner"
+                android:enabled="false"
+                android:layout_marginBottom="10dp"
+               />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/work_order_partner_name"
+                style="@style/materialText"
+                android:theme="@style/materialText">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/workOrderPartnerName"
+                    style="@style/editTextWorkOrderFocusable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Win_Win"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/work_order_partner_code"
+                style="@style/materialText"
+                android:theme="@style/materialText">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/workOrderPartnerCode"
+                    style="@style/editTextWorkOrderFocusable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PP-1235"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/work_order_partner_address"
+                style="@style/materialText"
+                android:theme="@style/materialText">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/workOrderPartnerAddress"
+                    style="@style/editTextWorkOrderFocusable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nemanjina 22, Beograd"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/work_order_partner_phone"
+                style="@style/materialText"
+                android:theme="@style/materialText">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/workOrderPartnerContact"
+                    style="@style/editTextWorkOrderFocusable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Milan Milanović"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linlay33"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linlay22"
+            android:layout_marginTop="10dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/failuresBtn"
+                style="@style/transparentButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:enabled="false"
+                android:paddingEnd="30dp"
+                android:paddingStart="30dp"
+                android:text="@string/failures"/>
+
+            <Button
+                android:id="@+id/servicesBtn"
+                style="@style/transparentButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:enabled="false"
+                android:paddingEnd="30dp"
+                android:paddingStart="30dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/services"/>
+
+            <Button
+                android:id="@+id/materialsBtn"
+                style="@style/transparentButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:enabled="false"
+                android:paddingEnd="30dp"
+                android:paddingStart="30dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/materials"/>
+
+
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/added_items_label"
+            android:id="@+id/failureCauseLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:layout_marginTop="30dp"
+            android:text="@string/other_fail_note"
+            android:visibility="gone"
+            android:layout_below="@+id/linlay33" />
+
+        <LinearLayout
+            android:id="@+id/failureCauseOtherLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rv_border"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            android:padding="10dp"
+            android:layout_below="@+id/failureCauseLbl"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/draft_list_item_text"
+                android:id="@+id/failCauseOtherText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="start|center_vertical"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/failCauseOtherDelete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/ic_menu_delete"/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/added_items_label"
+            android:id="@+id/addedServicesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/added_services"
+            android:layout_below="@+id/failureCauseOtherLayout"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            style="@style/added_items_recycler_view"
+            android:id="@+id/addedServicesRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addedServicesLabel"/>
+
+        <TextView
+            style="@style/added_items_label"
+            android:id="@+id/addedMaterialsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/added_materials"
+            android:enabled="false"
+            android:layout_below="@+id/addedServicesRv"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            style="@style/added_items_recycler_view"
+            android:id="@+id/addedMaterialsRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addedMaterialsLabel" />
+
+        <TextView
+            style="@style/added_items_label"
+            android:id="@+id/addedFailuresLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/added_failures"
+            android:enabled="false"
+            android:layout_below="@+id/addedMaterialsRv"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            style="@style/added_items_recycler_view"
+            android:id="@+id/addedFailuresRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addedFailuresLabel" />
+
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            android:layout_below="@+id/addedFailuresRv">
+
+        </ExpandableListView>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/workOrderNoteEditText"
+        android:layout_below="@+id/expandableListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="50dp"
+        android:hint="@string/note_work_order"
+        style="@style/materialText"
+        android:theme="@style/materialText">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/workOrderNote"
+            style="@style/editTextWorkOrderFocusable"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textSize="12sp"
+            android:text=" "
+            android:textColor="@color/white"
+
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/workOrderWorkDescEditText"
+        android:layout_below="@+id/workOrderNoteEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/work_description"
+        style="@style/materialText"
+        android:theme="@style/materialText">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/workOrderDescription"
+            style="@style/editTextWorkOrderFocusable"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textSize="12sp"
+            android:text=" "
+            android:textColor="@color/white"
+
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayForSig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/workOrderWorkDescEditText">
+        <TextView
+            style="@style/draft_list_item_text"
+            android:id="@+id/hasSignatureLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:paddingTop="0dp"
+            android:text="@string/hasSignature"
+            />
+        <Button
+            android:id="@+id/getCustomerSignatureBtn"
+            style="@style/transparentButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:enabled="false"
+            android:paddingEnd="30dp"
+            android:paddingStart="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/hasSignatureLabel"
+            android:text="@string/signature"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/getCustomerSignatureBtn">
+
+            <TextView
+                style="@style/draft_list_item_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:paddingTop="0dp"
+                android:text="@string/work_order_finished"/>
+
+            <RadioGroup
+                android:id="@+id/isWorkOrderFinishedRg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioBtnYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:layout_marginEnd="10dp"
+                    android:buttonTint="@drawable/text_color"
+                    android:textColor="@drawable/text_color"
+                    android:text="@string/yes"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioBtnNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:layout_marginStart="10dp"
+                    android:buttonTint="@drawable/text_color"
+                    android:textColor="@drawable/text_color"
+                    android:text="@string/no"/>
+            </RadioGroup>
+
+        </LinearLayout>
+    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relativeLayForPrint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/relativeLayForSig">
+            <TextView
+                style="@style/draft_list_item_text"
+                android:id="@+id/isReceiptPrintedLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:paddingTop="0dp"
+                android:text="@string/isPrinted"
+                />
+            <Button
+                android:id="@+id/printReceiptBtn"
+                style="@style/transparentButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:enabled="false"
+                android:paddingEnd="30dp"
+                android:paddingStart="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/isReceiptPrintedLabel"
+                android:text="@string/print"/>
+        </RelativeLayout>
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/escalatedCb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_below="@+id/relativeLayForPrint"
+            android:textColor="@drawable/text_color"
+            android:buttonTint="@drawable/text_color"
+            android:text="@string/isEscalated"
+            />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/customerRejectedCb"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:enabled="false"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="100dp"
+            android:layout_below="@+id/relativeLayForPrint"
+            android:layout_toEndOf="@+id/escalatedCb"
+            android:textColor="@drawable/text_color"
+            android:buttonTint="@drawable/text_color"
+            android:text="@string/customer_rejected"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_below="@+id/escalatedCb"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="50dp">
+
+
+
+            <Button
+                android:id="@+id/sendDataToServerBtn"
+                style="@style/transparentButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:enabled="false"
+                android:paddingEnd="30dp"
+                android:paddingStart="30dp"
+                android:text="@string/send_data"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

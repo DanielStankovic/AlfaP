@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="700dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/myDialog"
+    android:padding="10dp"
+    android:background="@color/blue_gray">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/allFailuresCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="18sp"
+        android:text="@string/all_failures"
+        tools:ignore="RelativeOverlap" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/failuresSpinner"
+        android:theme="@style/ImageTypeSpinnerTheme"
+        android:backgroundTint="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/allFailuresCb"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/failureCauseEtLay"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/failure_cause_search"
+        android:layout_below="@+id/failuresSpinner"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="10dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/failureCauseEt"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            /> </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/failureCauseRv"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+
+        android:layout_below="@+id/failureCauseEtLay"
+        android:layout_marginTop="15dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/failureCauseOtherCommLay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="@string/other_fail_note"
+        android:layout_below="@+id/failuresSpinner"
+        android:layout_alignBottom="@+id/failureCauseRv"
+        android:focusable="true"
+        android:visibility="invisible"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="10dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/failureCauseOtherComm"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            /> </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/failureCauseRv"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/failuresCancelBtn"
+            style="@style/transparentButtonStyle"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:paddingEnd="30dp"
+            android:paddingStart="30dp"
+            android:text="@string/cancel"
+            android:layout_marginEnd="35dp"
+            />
+        <Button
+            android:id="@+id/failuresChooseBtn"
+            style="@style/transparentButtonStyle"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:paddingEnd="30dp"
+            android:paddingStart="30dp"
+            android:text="@string/choose"
+            android:layout_marginStart="35dp"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

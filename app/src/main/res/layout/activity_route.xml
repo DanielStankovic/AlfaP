@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_item_bg"
+    tools:context=".activity.RouteActivity">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFilter"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:cardElevation="10dp">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/list_item_bg"
+            android:orientation="horizontal"
+            android:paddingTop="6dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:orientation="vertical"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_gravity="start">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/wo_type_label"/>
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/workOrderTypeSpinner"
+                        android:layout_width="180dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="5dp"
+                        android:layout_gravity=""
+
+                        >
+
+
+                    </androidx.appcompat.widget.AppCompatSpinner>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_gravity="start">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/partner_label"/>
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/partnerSpinner"
+                        android:layout_width="180dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        >
+
+                    </androidx.appcompat.widget.AppCompatSpinner>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_gravity="start">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/region"/>
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/regionSpinner"
+                        android:layout_width="180dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        >
+
+
+                    </androidx.appcompat.widget.AppCompatSpinner>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_gravity="start">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/region_place"/>
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/regionPlaceSpinner"
+                        android:layout_width="180dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        >
+
+                    </androidx.appcompat.widget.AppCompatSpinner>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:text="@string/critical_wo_label"/>
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/criticalWorkOrderCb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"/>
+
+                <TextView
+                    android:id="@+id/routeTotalNumWorkOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    android:id="@+id/routeRv"
+    android:layout_below="@+id/cardFilter"
+        android:layout_above="@+id/linLayLegend"
+    android:layout_marginTop="10dp"
+        android:scrollbars="vertical">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/linLayLegend"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/lessThan3Days"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:background="@color/lessThan3Days"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/between3And5Days"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:background="@color/between3And5Days"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/between5And10Days"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:background="@color/between5And10Days"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</RelativeLayout>

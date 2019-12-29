@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/myDialog"
+    android:padding="10dp"
+    android:background="@color/blue_gray">
+
+    <TextView
+        style="@style/containerSubtitleLabelDraft"
+        android:id="@+id/failureForWoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/failure_for_wo_title"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/failureForWoRv"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/failureForWoTitle"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        style="@style/containerSubtitleLabelDraft"
+        android:id="@+id/noFailureForWoTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_failures_for_wo"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:id="@+id/failureForWoLinLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/failureForWoRv">
+        <TextView
+            style="@style/containerSubtitleLabelDraft"
+            android:id="@+id/failureForWoMatColor"
+            android:layout_width="0dp"
+            android:gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            style="@style/containerSubtitleLabelDraft"
+            android:id="@+id/failureForWoMatType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_weight="1"/>
+
+
+
+    </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/closeFailureForWoBtn"
+            style="@style/transparentButtonStyle"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:paddingEnd="30dp"
+            android:paddingStart="30dp"
+            android:text="@string/close"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/failureForWoLinLay"
+            android:layout_centerHorizontal="true"
+            />
+
+
+</RelativeLayout>

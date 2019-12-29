@@ -1,0 +1,197 @@
+<resources>
+    <string name="app_name">KolibriAlfaPlam</string>
+    <string name="version">Verzija: %1$s</string>
+    <string name="username">Korisničko ime</string>
+    <string name="password">Lozinka</string>
+    <string name="login">Prijava</string>
+    <string name="route">Radni nalozi</string>
+    <string name="send_data">Pošalji podatke</string>
+    <string name="get_data">Preuzmi šifarnike</string>
+    <string name="last_work_orders">Poslednji radni nalozi</string>
+    <string name="dialog_btn_yes">Da</string>
+    <string name="dialog_btn_no">Ne</string>
+    <string name="work_order">NALOG</string>
+    <string name="product">PROIZVOD</string>
+    <string name="customer">KLIJENT</string>
+    <string name="partner">PARTNER</string>
+    <string name="work_order_wo_type">Tip naloga</string>
+    <string name="work_order_wo_code">Broj naloga</string>
+    <string name="work_order_wo_date">Planirani datum</string>
+    <string name="work_order_customer_name">Ime klijenta*</string>
+    <string name="work_order_customer_address">Adresa*</string>
+    <string name="work_order_customer_city">Grad*</string>
+    <string name="work_order_customer_phone">Telefon*</string>
+    <string name="work_order_product_model">Model peći</string>
+    <string name="work_order_product_srnum">Serijski broj*</string>
+    <string name="work_order_product_power">Snaga peći</string>
+    <string name="work_order_partner_name">Naziv</string>
+    <string name="work_order_partner_address">Adresa</string>
+    <string name="work_order_partner_code">Šifra</string>
+    <string name="work_order_partner_phone">Kontakt</string>
+    <string name="note_work_order">Napomena</string>
+    <string name="work_description">Opis posla</string>
+    <string name="check_in">Check In</string>
+    <string name="check_out">Check Out</string>
+    <string name="coordinates">Koordinate</string>
+    <string name="questions">Pitanja</string>
+    <string name="yes">DA</string>
+    <string name="no">NE</string>
+    <string name="draft">Draft</string>
+    <string name="sent">Poslato</string>
+    <string name="not_sent">Nije poslato</string>
+    <string name="date">Datum</string>
+    <string name="period">Period</string>
+    <string name="error_message">Niste uneli dobre vrednosti</string>
+    <string name="data_sync">Sinhronizacija podataka…</string>
+    <string name="dialog_check_out_title">Komentar za CheckOut:</string>
+    <string name="cancel">ODUSTANI</string>
+    <string name="submit">POTVRDI</string>
+    <string name="please_wait">Molimo sačekajte…</string>
+    <string name="services">Usluge</string>
+    <string name="service">Pretraži usluge…</string>
+    <string name="material_search">Pretraži materijale…</string>
+    <string name="choose">ODABERI</string>
+    <string name="unit_of_measure">Jedinica: %1$s</string>
+    <string name="real_reserved_quantity">%1$s količina: %2$.2f</string>
+    <string name="time">Vreme</string>
+    <string name="time_unit">Vreme (%1$s)</string>
+    <string name="quantity">Količina</string>
+    <string name="quantity_unit">Količina (%1$s)</string>
+    <string name="added_services">Dodate usluge:</string>
+    <string name="service_unit_spent">Utrošeno %1$d %2$s</string>
+    <string name="material_unit_spent">Utrošeno %1$d %2$s</string>
+    <string name="materials">MATERIJALI</string>
+    <string name="added_materials">Dodati materijali:</string>
+    <string name="all_services">Sve usluge</string>
+    <string name="signature">Potpis</string>
+    <string name="hasSignature">Nalog &lt;big>&lt;b>%1$s&lt;/b>&lt;/big> potpisan</string>
+    <string name="signature_here">Potpis ovde</string>
+    <string name="clear">Obriši</string>
+    <string name="save">Sačuvaj</string>
+    <string name="work_order_finished">Radni nalog zavrešen:</string>
+    <string name="scan_barcode">Skeniraj barkod</string>
+    <string name="work_order_product_barcode">Barkod</string>
+    <string name="change_product">Izmeni proizvod</string>
+    <string name="product_search">Pretraži proizvode</string>
+    <string name="product_model">Model: %1$s</string>
+    <string name="work_order_product_production_date">Datum proizvodnje</string>
+    <string name="work_order_product_purchase_date">Datum kupovine</string>
+    <string name="selected_date">%1$d.%2$d.%3$d.</string>
+    <string name="isPrinted">Izveštaj &lt;big>&lt;b>%1$s&lt;/b>&lt;/big> odštampan</string>
+    <string name="print">Štampaj</string>
+    <string name="take_picture">Slikaj</string>
+    <string name="note">Napomena</string>
+    <string name="send">Pošalji</string>
+    <string name="back">Nazad</string>
+    <string name="pick_image_intent_text">Odaberite sliku</string>
+    <string name="warehouseState">Stanje magacina</string>
+    <string name="failures">Kvarovi</string>
+    <string name="all_failures">Svi kvarovi</string>
+    <string name="failure_cause_search">Pretraži uzroke kvarova</string>
+    <string name="added_failures">Dodati kvarovi:</string>
+    <string name="added_failure_label">Kvar: %1$s</string>
+    <string name="added_cause_label">Uzrok kvara: %1$s</string>
+    <string name="start">START</string>
+    <string name="stop">STOP</string>
+    <string name="start_time">Start: %1$s</string>
+    <string name="material_price">Cena: %1$.2f</string>
+    <string name="price">%1$.2f</string>
+
+    //ROUTE PREVIEW
+
+    <string name="workOrderCodeLabel">NALOG - %1$s</string>
+    <string name="workOrderTypeLabel">Tip: %1$s</string>
+    <string name="workOrderPlannedDateLabel">Datum: %1$s</string>
+    <string name="workOrderDateUntilLimit">Dana do roka: %1$d</string>
+    <string name="workOrderStatusID">Status: %1$s</string>
+    <string name="workOrderProductName">Naziv: %1$s</string>
+    <string name="workOrderProductCode">Šifra: %1$s</string>
+    <string name="workOrderProductModel">Model: %1$s</string>
+    <string name="workOrderCustomerName">Ime: %1$s</string>
+    <string name="workOrderCustomerAddress">Adresa: %1$s %2$s</string>
+    <string name="workOrderCustomerCity">Grad: %1$s</string>
+    <string name="workOrderCustomerWarning">Označen kupac</string>
+    <string name="workOrderCustomerNotWarning">Neoznačen kupac</string>
+    <string name="lessThan3Days"><![CDATA[< 3 dana]]></string>
+    <string name="between3And5Days">3 – 5 dana</string>
+    <string name="between5And10Days">5 – 10 dana</string>
+    <string name="region">Region:</string>
+    <string name="region_place">Mesto:</string>
+    <string name="partner_label">Partner:</string>
+    <string name="wo_type_label">Nalog:</string>
+    <string name="critical_wo_label">Kritični nalozi</string>
+    <string name="refresh_data">Osveži podatke</string>
+    <string name="inWarranty">U garanciji</string>
+    <string name="productDocumentation">DOKUMENTACIJA ARTIKLA</string>
+    <string name="open">Otvori dokument</string>
+    <string name="downloadDocumentation">Preuzmi dokumentaciju</string>
+    <string name="productCodeLbl">Šifra artikla: %1$s</string>
+    <string name="document_type_lbl">Tip dokumenta: %1$s</string>
+    <string name="no_document_lbl">Nemate dokumente za ovaj proizvod.\nPreuzmite sa servera.</string>
+    <string name="download">Preuzimi</string>
+    <string name="showProdDocument">Prikaži</string>
+    <string name="work_order_change_warranty">%1$s%2$s</string>
+    <string name="dialog_no_sig_lbl">Razlog zbog koga nalog nije potpisan:</string>
+    <string name="work_order_customer_no">Broj*</string>
+    <string name="isEscalated">Problem?</string>
+    <string name="legalPerson">Pravno lice</string>
+    <string name="total_num_work_order">Ukupno: %1$d</string>
+
+
+    //DRAFT WORK OREDER
+
+    <string name="draft_work_order_code">Nalog: %1$s</string>
+    <string name="draft_work_order_cust_name">Kupac: %1$s</string>
+    <string name="draft_work_order_cust_address">Adresa: %1$s</string>
+    <string name="draft_work_order_cust_city">Grad: %1$s</string>
+    <string name="draft_work_order_prod_name">Proizvod: %1$s</string>
+    <string name="draft_work_order_part_name">Partner: %1$s</string>
+    <string name="draft_work_order_created_date">Datum kreiranja: %1$s</string>
+    <string name="draft_work_order_sent_date">Datum slanja: %1$s</string>
+
+
+    //DRAFT ITEMS
+
+    <string name="draft_check_in_date">Check In datum: %1$s</string>
+    <string name="draft_check_out_date">Check Out datum: %1$s</string>
+    <string name="draft_start_stop_time">Vreme: %1$s</string>
+    <string name="draft_start_stop_status">Status: %1$s</string>
+    <string name="draft_image_type">Tip slike: %1$s</string>
+
+
+    <string name="connect_printer">Povežite stampač</string>
+    <string name="other_fail_note">Uzrok kvara (ostalo):</string>
+    <string name="sr_num_history">Istorija po sr. broju</string>
+
+
+    //HISTORY ITEMS
+    <string name="serial_number">Serijski Broj: %1$s</string>
+    <string name="to">Do:</string>
+    <string name="from">Od:</string>
+    <string name="period_date">Period: %1$s    -    %2$s</string>
+    <string name="date_lbl">Datum:</string>
+    <string name="date_lbl_param">Datum: %1$s</string>
+
+
+    //NORMS
+    <string name="norm_service_title">Norma za uslugu: %1$s</string>
+    <string name="norm_name">Ime norme: %1$s</string>
+    <string name="norm_code">Šifra norme: %1$s</string>
+    <string name="norm_time">NORMA: %1$s %2$s</string>
+    <string name="ok">OK</string>
+    <string name="close">Zatvori</string>
+
+
+    <string name="mileage">Kilometraža</string>
+    <string name="failure">Kvar</string>
+    <string name="failure_for_wo_title">Kvarovi za nalog br: %1$s</string>
+    <string name="color">Boja: %1$s</string>
+    <string name="type">Tip: %1$s</string>
+    <string name="no_failures_for_wo">Nema definisanih kvarova za ovaj radni nalog</string>
+    <string name="failure_and_cause">%1$s - %2$s</string>
+    <string name="type_lbl">Tip</string>
+    <string name="color_lbl">Boja</string>
+    <string name="customer_sr_num">01010000000000000</string>
+    <string name="customer_rejected">Korisnik odustao</string>
+
+</resources>

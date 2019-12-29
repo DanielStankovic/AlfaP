@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#0D47A1</color>
+    <color name="colorAccent">#ffffff</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="transparent_black">#AE000000</color>
+    <color name="gradient_start">#00B4DB</color>
+    <color name="gradient_end">#0083B0</color>
+    <color name="gradient_center">#9ce8f1</color>
+    <color name="blue_gray">#37474F</color>
+    <color name="list_item_bg">#dcdedf</color>
+    <color name="light_gray">#9FA7AA</color>
+    <color name="text_subtitle_white">#A1FFFFFF</color>
+    <color name="light_red">#F81A1A</color>
+    <color name="light_red_alfa">#A1F81A1A</color>
+
+    //DRAFT COLORS
+    <color name="draft_sent_color">#b40bb911</color>
+    <color name="draft_not_sent_color">#b4ed1911</color>
+    <color name="draft_legend_bar_bg_color">#0f8bf7</color>
+
+    //WORK ORDER URGENCY COLORS
+    <color name="lessThan3Days">#95FF0B03</color>
+    <color name="between3And5Days">#C6F54E00</color>
+    <color name="between5And10Days">#954DFF00</color>
+
+    //DRAFT ITEMS COLORS
+
+    <color name="draft_gradient_sent_start">#2196F3</color>
+    <color name="draft_gradient_sent_end">#2196F3</color>
+
+    <color name="draft_gradient_sent_start_clicked">#7DC3FA</color>
+    <color name="draft_gradient_sent_end_clicked">#4A80AC</color>
+
+    <color name="draft_gradient_not_sent_start">#FF0505</color>
+    <color name="draft_gradient_not_sent_end">#FF0505</color>
+
+    <color name="draft_gradient_not_sent_start_clicked">#FA6B6B</color>
+    <color name="draft_gradient_not_sent_end_clicked">#752929</color>
+
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#fff</color>
+
+
+
+
+
+</resources>

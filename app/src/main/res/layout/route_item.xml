@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@color/list_item_bg">
+    <LinearLayout
+        android:id="@+id/routeItemContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/list_item_label"
+                    android:id="@+id/workOrderRouteLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/work_order" />
+                <TextView
+                    android:id="@+id/workOrderTypeRouteTv"
+                    style="@style/list_item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Tip naloga: "/>
+
+
+                <TextView
+                    android:id="@+id/workOrderDateRouteTv"
+                    style="@style/list_item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Tip naloga: "/>
+
+                <TextView
+                    android:id="@+id/workOrderDateUntilLimit"
+                    style="@style/list_item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Tip naloga: "/>
+
+                <TextView
+                    android:id="@+id/workOrderStatusID"
+                    style="@style/list_item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:text="Tip naloga: "/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/list_item_label"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/isDraftLblRouteTv"
+                        android:text="@string/customer"/>
+
+                    <TextView
+                        android:id="@+id/isDraftLblRouteTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/list_item_label"
+                        android:layout_alignParentEnd="true"
+                        android:textStyle="italic|bold"
+                        android:textColor="@color/light_red"
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/custNameRouteTv"
+                    style="@style/list_item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Tip naloga: "/>
+
+                <TextView
+                    android:id="@+id/custCityRouteTv"
+                    style="@style/list_item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Tip naloga: "/>
+                <TextView
+                    android:id="@+id/custAddressRouteTv"
+                    style="@style/list_item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Tip : "/>
+
+                <TextView
+                    style="@style/list_item_text"
+                    android:id="@+id/custWarning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/list_item_label"
+                    android:text="@string/product"/>
+
+                <TextView
+                    android:id="@+id/productNameRouteTv"
+                    style="@style/list_item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Tip naloga: "/>
+                <TextView
+                    android:id="@+id/productCodeRouteTv"
+                    style="@style/list_item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Tip naloga: "/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/list_item_label"
+                    android:text="@string/failure"/>
+                <TextView
+                    android:id="@+id/failureNameRouteTv"
+                    style="@style/list_item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity=""
+                    android:text="Tip naloga: "/>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

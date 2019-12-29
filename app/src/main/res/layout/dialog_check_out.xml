@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:theme="@style/myDialog"
+    android:padding="5dp"
+    android:background="@color/blue_gray"
+    android:layout_width="match_parent"
+    android:layout_height="280dp">
+
+    <TextView
+        android:id="@+id/checkOutDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        android:textSize="18sp"
+        android:text="@string/dialog_check_out_title"/>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/checkOutDialogSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/checkOutDialogTitle"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/checkOutDialogEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/checkOutDialogSpinner"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/mileage"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_toStartOf="@+id/checkOutDialogCancelBtn"
+        android:layout_alignBottom="@+id/checkOutDialogCancelBtn"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/checkOutDialogKmEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/checkOutDialogCancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/transparent"
+        android:text="@string/cancel"
+        android:textColor="@color/gradient_center"
+        android:layout_toStartOf="@+id/checkOutDialogSubmitBtn"
+        android:layout_below="@+id/checkOutDialogEditText"/>
+
+    <Button
+        android:id="@+id/checkOutDialogSubmitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/transparent"
+        android:text="@string/submit"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/gradient_center"
+        android:layout_below="@+id/checkOutDialogEditText"/>
+
+</RelativeLayout>

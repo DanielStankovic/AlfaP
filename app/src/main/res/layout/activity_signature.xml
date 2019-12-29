@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".activity.SignatureActivity">
+
+    <com.simplify.ink.InkView
+        android:id="@+id/ink"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:inkFlags="interpolation|responsiveWeight"/>
+    <View
+        android:id="@+id/decorationLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/white"
+        android:layout_below="@id/ink"/>
+
+    <TextView
+        android:id="@+id/signHereLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/decorationLine"
+        android:text="@string/signature_here"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/clearSignatureBtn"
+            style="@style/transparentButtonStyle"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:paddingEnd="30dp"
+            android:paddingStart="30dp"
+            android:text="@string/clear"
+            android:layout_marginEnd="35dp"
+            />
+        <Button
+            android:id="@+id/sendSignatureBtn"
+            style="@style/transparentButtonStyle"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:paddingEnd="30dp"
+            android:paddingStart="30dp"
+            android:text="@string/save"
+            android:layout_marginStart="35dp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

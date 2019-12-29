@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="650dp"
+    android:background="@color/blue_gray">
+
+<RadioGroup
+    android:id="@+id/lastWorkOrderDialogGrp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginTop="20dp"
+    android:orientation="horizontal">
+    <RadioButton
+        android:id="@+id/datePickerDateRb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_marginEnd="20dp"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="24sp"
+        android:text="@string/period"
+        android:textColor="@color/white"
+        />
+</RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/datePickerLinLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/lastWorkOrderDialogGrp"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal">
+        <TextView
+            android:id="@+id/fromLblDateDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date_lbl"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:layout_marginEnd="50dp"
+            android:layout_gravity="center_vertical"
+           />
+        <DatePicker
+
+            android:id="@+id/datePickerFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnersShown="true"
+            android:calendarTextColor="@color/white"
+            android:outlineSpotShadowColor="@color/white"
+            android:outlineAmbientShadowColor="@color/white"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:theme="@style/myDialog"
+           >
+
+        </DatePicker>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/datePickerLinLay2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/datePickerLinLay"
+        android:layout_marginTop="40dp"
+        android:visibility="gone"
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:layout_marginEnd="50dp"
+            android:layout_gravity="center_vertical"
+            />
+        <DatePicker
+
+            android:id="@+id/datePickerTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnersShown="true"
+            android:calendarTextColor="@color/white"
+            android:outlineSpotShadowColor="@color/white"
+            android:outlineAmbientShadowColor="@color/white"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:theme="@style/myDialog"
+            >
+
+        </DatePicker>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/datePickerLinLay2"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/datePickerCancelBtn"
+            style="@style/transparentButtonStyle"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:paddingEnd="30dp"
+            android:paddingStart="30dp"
+            android:text="@string/cancel"
+            android:layout_marginEnd="35dp"
+            />
+        <Button
+            android:id="@+id/datePickerChooseBtn"
+            style="@style/transparentButtonStyle"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:paddingEnd="30dp"
+            android:paddingStart="30dp"
+            android:text="@string/choose"
+            android:layout_marginStart="35dp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

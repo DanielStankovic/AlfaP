@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".activity.WarehouseStateActivity">
+
+    <TextView
+        style="@style/containerSubtitleLabel"
+        android:id="@+id/warehouseNameTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text="AAAAAAAAAA"/>
+
+    <TextView
+        style="@style/containerSubtitleLabel"
+        android:id="@+id/warehouseCodeTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/warehouseNameTv"
+        android:gravity="center_horizontal"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:layout_marginStart="15dp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchMatLay"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/material_search"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:textColorHint="@color/white"
+       android:layout_alignParentStart="true"
+        android:layout_below="@+id/warehouseCodeTv"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/warehouseStateSearchMat"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/white"
+            app:backgroundTint="@color/white"
+            /> </com.google.android.material.textfield.TextInputLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/warehouseCodeTv"
+    android:layout_marginEnd="40dp"
+    android:layout_marginTop="15dp">
+    <TextView
+        style="@style/containerSubtitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="@string/refresh_data"
+        />
+    <ImageButton
+        android:id="@+id/warehouseStateRefreshBtn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/button_background"
+        android:src="@drawable/ic_refresh"/>
+</LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/warehouseStateRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchMatLay"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"/>
+
+
+
+</RelativeLayout>

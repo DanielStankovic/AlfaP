@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".activity.ProductDocumentationActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/documentationRv"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/linearLayout1"/>
+
+
+
+    <TextView
+        android:id="@+id/documentationProdName"
+        style="@style/containerSubtitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="aaa"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/documentationProdName">
+
+        <TextView
+            android:id="@+id/documentationProdCode"
+            style="@style/containerSubtitleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:text="TextView"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <Button
+            style="@style/transparentButtonStyle"
+            android:id="@+id/documentationDownloadDocBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="60dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="14sp"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/ic_refresh"
+            android:drawableTint="@drawable/text_color"
+            android:text="@string/refresh_data" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/noDocumentationLbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/no_document_lbl"
+        android:layout_above="@+id/linearLayout"
+        android:layout_below="@+id/linearLayout1" />
+
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".activity.OptionsActivity">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="120dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/startDateTimeLbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            />
+
+        <Button
+            android:id="@+id/startStopBtn"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="70dp"
+            android:textColor="@color/gradient_end"
+            android:background="@drawable/start_btn_bg"
+            android:textSize="18sp"
+            android:text="@string/start"
+            />
+
+        <Button
+            android:id="@+id/routeBtn"
+            style="@style/transparentButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:enabled="false"
+            android:text="@string/route"
+            />
+
+        <Button
+            android:id="@+id/draftBtn"
+            style="@style/transparentButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:enabled="false"
+            android:text="@string/draft"
+            />
+
+        <Button
+            android:id="@+id/warehouseStateBtn"
+            style="@style/transparentButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:enabled="false"
+            android:text="@string/warehouseState"
+            />
+
+        <Button
+            android:id="@+id/lastWorkOrdersBtn"
+            style="@style/transparentButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:enabled="false"
+            android:text="@string/last_work_orders"
+            />
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:id="@+id/sendDataBtn"
+        style="@style/transparentButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:drawablePadding="5dp"
+        android:drawableStart="@drawable/send_data_icon"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="30dp"
+        android:text="@string/send_data"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"/>
+
+    <Button
+        android:id="@+id/getDataBtn"
+        style="@style/transparentButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginBottom="30dp"
+        android:drawablePadding="5dp"
+        android:drawableStart="@drawable/get_data_icon"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:text="@string/get_data"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"/>
+
+</RelativeLayout>

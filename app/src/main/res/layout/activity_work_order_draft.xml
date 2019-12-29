@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    android:focusableInTouchMode="true"
+    tools:context=".activity.WorkOrderDraftActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/linlay11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp">
+
+                    <TextView
+                        style="@style/containerSubtitleLabelDraft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:enabled="false"
+                        android:text="@string/work_order" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/materialTextDraft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/work_order_wo_type"
+                        android:theme="@style/materialTextDraft">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/draftWorkOrderType"
+                            style="@style/editTextWorkOrderDraft"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/materialTextDraft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/work_order_wo_code"
+                        android:theme="@style/materialTextDraft">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/draftWorkOrderCode"
+                            style="@style/editTextWorkOrderDraft"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/materialTextDraft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/work_order_wo_date"
+                        android:theme="@style/materialTextDraft">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/draftWorkOrderDate"
+                            style="@style/editTextWorkOrderDraft"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/draftWarrantyCb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:text="@string/inWarranty"
+                            android:textColor="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/draftCustomerRejectedCb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:text="@string/customer_rejected"
+                            android:textColor="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/draftIsLegalPersonCb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/white"
+                            android:visibility="gone"
+                            android:enabled="false"
+                            android:text="@string/legalPerson"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp">
+
+                    <TextView
+                        android:id="@+id/draftWorkOrderClientSubtitle"
+                        style="@style/containerSubtitleLabelDraft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:enabled="false"
+                        android:text="@string/customer" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/materialTextDraft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/work_order_customer_name"
+                        android:theme="@style/materialTextDraft">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/draftWorkOrderCustomerName"
+                            style="@style/editTextWorkOrderDraft"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/materialTextDraft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_toStartOf="@+id/draftCustomerAdressNoLay"
+                            android:hint="@string/work_order_customer_address"
+                            android:theme="@style/materialTextDraft">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/draftWorkOrderCustomerAddress"
+                                style="@style/editTextWorkOrderDraft"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/draftCustomerAdressNoLay"
+                            style="@style/materialTextDraft"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:hint="@string/work_order_customer_no"
+                            android:theme="@style/materialTextDraft">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/draftWorkOrderCustomerAddressNo"
+                                style="@style/editTextWorkOrderDraft"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </RelativeLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/materialTextDraft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/work_order_customer_city"
+                        android:theme="@style/materialTextDraft">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/draftWorkOrderCustomerCity"
+                            style="@style/editTextWorkOrderDraft"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Beograd"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/materialTextDraft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/work_order_customer_phone"
+                        android:theme="@style/materialTextDraft">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/draftWorkOrderCustomerPhone"
+                            style="@style/editTextWorkOrderDraft"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="10" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linlay22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linlay11"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp">
+
+
+                    <TextView
+                        style="@style/containerSubtitleLabelDraft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:enabled="false"
+                        android:text="@string/product" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/materialTextDraft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/work_order_partner_name"
+
+                        android:theme="@style/materialTextDraft">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/draftWorkOrderProductName"
+                            style="@style/editTextWorkOrderDraft"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:text="Pec na pelet"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/materialTextDraft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/work_order_partner_code"
+                        android:theme="@style/materialTextDraft">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/draftWorkOrderProductCode"
+                            style="@style/editTextWorkOrderDraft"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="PE-8894" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/color_lbl"
+                            style="@style/materialText"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/draftProductMatTypeLay"
+                            android:layout_marginEnd="10dp"
+                            android:theme="@style/materialText">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/draftWorkOrderProductColor"
+                                style="@style/editTextWorkOrder"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/draftProductMatTypeLay"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/type_lbl"
+                            style="@style/materialText"
+                            android:layout_alignParentEnd="true"
+                            android:theme="@style/materialText">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/draftWorkOrderProductMatType"
+                                style="@style/editTextWorkOrder"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </RelativeLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/materialTextDraft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/work_order_product_srnum"
+
+                        android:theme="@style/materialTextDraft">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/draftWorkOrderProductSerNum"
+                            style="@style/editTextWorkOrderDraft"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="17"
+                            android:text=" " />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!--
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/work_order_product_power"
+                            style="@style/materialTextDraft"
+                            android:theme="@style/materialTextDraft">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/workOrderProductPower"
+                                style="@style/editTextWorkOrderDraft"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:text=" "
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        -->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/materialTextDraft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/work_order_product_production_date"
+                        android:theme="@style/materialTextDraft">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/draftWorkOrderProductProductionDate"
+                            style="@style/editTextWorkOrderDraft"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_calendar"
+                            android:drawableTint="@color/white"
+                            android:focusable="false"
+                            android:inputType="date"
+                            android:text=" " />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/materialTextDraft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/work_order_product_purchase_date"
+                        android:theme="@style/materialTextDraft">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/draftWorkOrderProductPurchaseDate"
+                            style="@style/editTextWorkOrderDraft"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_calendar"
+                            android:drawableTint="@color/white"
+                            android:focusable="false"
+                            android:inputType="date"
+                            android:text=" " />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/draftPartnerContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp">
+
+                    <TextView
+                        style="@style/containerSubtitleLabelDraft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:enabled="false"
+                        android:text="@string/partner" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/materialTextDraft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/work_order_partner_name"
+                        android:theme="@style/materialTextDraft">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/draftWorkOrderPartnerName"
+                            style="@style/editTextWorkOrderDraft"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Win_Win"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/materialTextDraft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/work_order_partner_code"
+                        android:theme="@style/materialTextDraft">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/draftWorkOrderPartnerCode"
+                            style="@style/editTextWorkOrderDraft"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="PP-1235"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/materialTextDraft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/work_order_partner_address"
+                        android:theme="@style/materialTextDraft">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/draftWorkOrderPartnerAddress"
+                            style="@style/editTextWorkOrderDraft"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nemanjina 22, Beograd" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/materialTextDraft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/work_order_partner_phone"
+                        android:theme="@style/materialTextDraft">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/draftWorkOrderPartnerContact"
+                            style="@style/editTextWorkOrderDraft"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Milan Milanović" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/added_items_label"
+                android:id="@+id/draftFailureCauseLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:layout_marginTop="30dp"
+                android:text="@string/other_fail_note"
+                android:visibility="gone"
+                android:layout_below="@+id/linlay22" />
+
+            <LinearLayout
+                android:id="@+id/draftFailureCauseOtherLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rv_border"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone"
+                android:padding="10dp"
+                android:layout_below="@+id/draftFailureCauseLbl"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/draft_list_item_text"
+                    android:id="@+id/draftFailCauseOtherText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="start|center_vertical"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/draftAddedServicesLabel"
+                style="@style/added_items_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/draftFailureCauseOtherLayout"
+                android:enabled="false"
+                android:visibility="gone"
+                android:text="@string/added_services" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/draftAddedServicesRv"
+                style="@style/added_items_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@+id/draftAddedServicesLabel" />
+
+            <TextView
+                android:id="@+id/draftAddedMaterialsLabel"
+                style="@style/added_items_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/draftAddedServicesRv"
+                android:enabled="false"
+                android:visibility="gone"
+                android:text="@string/added_materials" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/draftAddedMaterialsRv"
+                style="@style/added_items_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@+id/draftAddedMaterialsLabel" />
+
+            <TextView
+                android:id="@+id/draftAddedFailuresLabel"
+                style="@style/added_items_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/draftAddedMaterialsRv"
+                android:enabled="false"
+                android:visibility="gone"
+                android:text="@string/added_failures" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/draftAddedFailuresRv"
+                style="@style/added_items_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@+id/draftAddedFailuresLabel" />
+
+            <ExpandableListView
+                android:id="@+id/draftExpandableListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/draftAddedFailuresRv"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible">
+
+            </ExpandableListView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/workOrderNoteEditText"
+                style="@style/materialTextDraft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/draftExpandableListView"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="15dp"
+                android:hint="@string/note_work_order"
+                android:theme="@style/materialTextDraft">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/draftWorkOrderNote"
+                    style="@style/editTextWorkOrderDraft"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:text=" "
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/workOrderWorkDescEditText"
+                style="@style/materialTextDraft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/workOrderNoteEditText"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:hint="@string/work_description"
+                android:theme="@style/materialTextDraft">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/draftWorkOrderDescription"
+                    style="@style/editTextWorkOrderDraft"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:text=" "
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayForSig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/workOrderWorkDescEditText"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/draftHasSignatureLabel"
+                    style="@style/draft_list_item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:enabled="false"
+                    android:paddingTop="0dp"
+                    android:textColor="@color/white"
+                    android:text="@string/hasSignature" />
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/draftEscalatedCb"
+                    android:layout_toEndOf="@+id/draftHasSignatureLabel"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/draft_list_item_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:textColor="@color/white"
+                        android:paddingTop="0dp"
+                        android:text="@string/work_order_finished" />
+
+                    <RadioGroup
+                        android:id="@+id/draftIsWorkOrderFinishedRg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:enabled="false"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/draftRadioBtnYes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:text="@string/yes"
+                            android:textColor="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/draftRadioBtnNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:text="@string/no"
+                            android:textColor="@color/white" />
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/draftEscalatedCb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:buttonTint="@color/white"
+                    android:enabled="false"
+                    android:text="@string/isEscalated"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

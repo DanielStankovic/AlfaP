@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:theme="@style/myDialog"
+    android:background="@color/blue_gray"
+    android:layout_height="wrap_content"
+    android:minHeight="200dp"
+    >
+
+    <TextView
+        android:id="@+id/syncTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        android:textSize="20sp"
+        android:text="@string/data_sync"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:theme="@style/MyProgressBarTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="40dp"
+        android:max="100"
+        style="@style/MyProgressBarTwo"
+        android:progress="0"/>
+
+    <TextView
+        android:id="@+id/progressBarTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/progressBar"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="80dp"
+        android:textSize="20sp"
+        android:text=""/>
+
+
+</RelativeLayout>

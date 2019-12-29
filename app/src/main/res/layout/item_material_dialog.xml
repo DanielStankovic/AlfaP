@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:background="@color/transparent"
+    >
+    <TextView
+        style="@style/draft_list_item_text"
+        android:id="@+id/materialNameTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:paddingTop="0dp"
+        android:layout_alignParentStart="true"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:layout_below="@+id/materialNameTv"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/materialCodeTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:textColor="@color/text_subtitle_white"
+            />
+
+        <TextView
+            android:id="@+id/materialUnitOfMeasureTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:textColor="@color/text_subtitle_white"
+            />
+
+        <TextView
+            android:id="@+id/materialPriceTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:textColor="@color/text_subtitle_white"
+            />
+    </LinearLayout>
+
+
+
+</RelativeLayout>
